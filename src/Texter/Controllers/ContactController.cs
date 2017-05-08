@@ -23,5 +23,10 @@ namespace Texter.Controllers
         {
             return View(_db.Contacts.ToList());
         }
+
+        public IActionResult ShowContactSave()
+        {
+            return View();
+        }
     }
 }
