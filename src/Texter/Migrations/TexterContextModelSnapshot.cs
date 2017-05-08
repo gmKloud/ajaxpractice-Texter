@@ -18,11 +18,14 @@ namespace Texter.Migrations
 
             modelBuilder.Entity("Texter.Models.Contact", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
                     b.Property<string>("Name");
 
                     b.Property<string>("Number");
 
-                    b.HasKey("Name");
+                    b.HasKey("Id");
 
                     b.ToTable("Contacts");
                 });
@@ -33,7 +36,7 @@ namespace Texter.Migrations
 
                     b.Property<string>("Body");
 
-                    b.Property<string>("ContactName");
+                    b.Property<int?>("ContactId");
 
                     b.Property<string>("From");
 
@@ -41,7 +44,7 @@ namespace Texter.Migrations
 
                     b.HasKey("To");
 
-                    b.HasIndex("ContactName");
+                    b.HasIndex("ContactId");
 
                     b.ToTable("Messages");
                 });
@@ -50,7 +53,7 @@ namespace Texter.Migrations
                 {
                     b.HasOne("Texter.Models.Contact", "Contact")
                         .WithMany("Messages")
-                        .HasForeignKey("ContactName");
+                        .HasForeignKey("ContactId");
                 });
         }
     }

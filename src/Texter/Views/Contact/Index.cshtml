@@ -13,9 +13,14 @@
 </div>
 
 <div class="row">
-
-@foreach (var contact in Model)
-{
+ 
+@foreach (var contact in Model) {
+    @if (contact == null)
+    {
+            <p>You have no friends!</p>
+    }
+    else
+    {
     <div class="col-md-5 contact-list">
     <div>
         <h3>
@@ -25,8 +30,9 @@
 
     </div>
     </div>
-}
+        }
+    }
 
     <div class="col-md-5" id="new-contact"></div>
-
+    <div id="saved-contact"></div>
 </div>

@@ -11,10 +11,17 @@ namespace Texter.Models
     public class Contact
     {
         [Key]
-        //public int Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Number { get; set; }
         public virtual ICollection<Message> Messages { get; set; }
-
+        
+        public Contact(string name, string number, int id = 0)
+        {
+            Name = name;
+            Number = number;
+            Id = id;
+        }
+        public Contact() { }
     }
 }

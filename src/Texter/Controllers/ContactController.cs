@@ -28,5 +28,13 @@ namespace Texter.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Create(string newName, string newNumber)
+        {
+            Contact newContact = new Contact(newName, newNumber);
+            _db.Contacts.Add(newContact);
+            _db.SaveChanges();
+            return Json(newContact);
+        }
     }
 }

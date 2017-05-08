@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Texter.Migrations
 {
-    public partial class New : Migration
+    public partial class blah : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,12 +13,14 @@ namespace Texter.Migrations
                 name: "Contacts",
                 columns: table => new
                 {
-                    Name = table.Column<string>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
                     Number = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Contacts", x => x.Name);
+                    table.PrimaryKey("PK_Contacts", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -26,7 +29,7 @@ namespace Texter.Migrations
                 {
                     To = table.Column<string>(nullable: false),
                     Body = table.Column<string>(nullable: true),
-                    ContactName = table.Column<string>(nullable: true),
+                    ContactId = table.Column<int>(nullable: true),
                     From = table.Column<string>(nullable: true),
                     Status = table.Column<string>(nullable: true)
                 },
@@ -34,17 +37,17 @@ namespace Texter.Migrations
                 {
                     table.PrimaryKey("PK_Messages", x => x.To);
                     table.ForeignKey(
-                        name: "FK_Messages_Contacts_ContactName",
-                        column: x => x.ContactName,
+                        name: "FK_Messages_Contacts_ContactId",
+                        column: x => x.ContactId,
                         principalTable: "Contacts",
-                        principalColumn: "Name",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Messages_ContactName",
+                name: "IX_Messages_ContactId",
                 table: "Messages",
-                column: "ContactName");
+                column: "ContactId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
