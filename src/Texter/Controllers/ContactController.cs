@@ -36,13 +36,22 @@ namespace Texter.Controllers
             return Json(newContact);
         }
 
-        [HttpPost]
-        public IActionResult Edit(int id)
+        //Get - Edit form
+        public IActionResult EditShow(int id)
         {
             var thisContact = _db.Contacts.FirstOrDefault(c => c.Id == id);
+            return View(thisContact);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, string name, string number)
+        {
+            Contact thisContact = _db.Contacts.FirstOrDefault(c => c.Id == id);
+            thisContact.Name = name;
+            thisContact.Number = number;
             _db.Entry(thisContact).State = EntityState.Modified;
             _db.SaveChanges();
-            return View(thisContact);
+            return Json(thisContact);
         }
     }
 }

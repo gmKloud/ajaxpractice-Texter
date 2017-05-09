@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<script src="~/js/edit.js" type="text/javascript"></script>
+
+@model Texter.Models.Contact
+
+<form class="edit-contact">
+    
+    <input type="hidden" id="id" name="id" value="@Model.Id" />
+    <label for="name">Name: </label>
+    <input type="text" name="name" required />
+
+    <label for="number">Number: </label>
+    <input type="text" name="number" required />
+
+    <button type="submit">Edit</button>
+    <button type="button" class="special-test-button">Test this</button>
+    <input type="hidden" value="you found it" class="special-test-value" />
+</form>
+    <button type="submit" class="delete">Delete</button>
+
+<button class="clicked">click</button>
+
