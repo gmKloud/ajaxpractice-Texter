@@ -34,31 +34,49 @@
             dataType: 'html',
             url: '/Contact/EditShow',
             success: function (result) {
-                console.log("Success first AJAX call");
                 $('#edit-' + clickedCont).html(result);
-                console.log($('.special-test-value').val());
-
                 $('.edit-contact').submit(function (e) {
-
                     e.preventDefault;
-                    console.log("Inside second level click function");
                     $.ajax({
                         type: 'POST',
                         data: $(this).serialize(),
                         dataType: 'json',
                         url: '/Contact/Edit/',
                         success: function (result) {
-                            console.log("Inside second level success");
                             var edited = "You have edited " + result.name + " : " + result.number
                             $('#edit').html(edited);
-                            location.reload();
+                            window.setTimeout(function () { location.reload() }, 1000);
                         }
                     });
                 });
             }
         });
     });
-    $('.special-test-button').click(function () {
-        console.log("hello");
-    })
+    $('.contact-entry').click(function () {
+        console.log($(this).context.id);
+        var clickedCont = $(this).context.id;
+        $.ajax({
+            type: 'GET',
+            data: { id: clickedCont },
+            dataType: 'html',
+            url: '/Contact/DeleteShow',
+            success: function (result) {
+                $('#delete-' + clickedCont).html(result);
+                $('.delete-contact').submit(function (e) {
+                    e.preventDefault;
+                    $.ajax({
+                        type: 'POST',
+                        data: $(this).serialize(),
+                        dataType: 'json',
+                        url: '/Contact/Delete/',
+                        success: function (result) {
+                            var deleted = "You have edited " + result.name + " : " + result.number
+                            $('#delete').html(deleted);
+                            window.setTimeout(function () { location.reload() }, 1000);
+                        }
+                    });
+                });
+            }
+        });
+    });
 });// end document eady bracket

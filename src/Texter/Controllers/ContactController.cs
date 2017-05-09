@@ -53,5 +53,22 @@ namespace Texter.Controllers
             _db.SaveChanges();
             return Json(thisContact);
         }
+
+        //Get Delete
+        public IActionResult DeleteShow(int id)
+        {
+            var thisContact = _db.Contacts.FirstOrDefault(c => c.Id == id);
+            return View(thisContact);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            Contact thisContact = _db.Contacts.FirstOrDefault(c => c.Id == id);
+            _db.Contacts.Remove(thisContact);
+            _db.SaveChanges();
+            return Json(thisContact);
+        }
+
     }
 }

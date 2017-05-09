@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Texter.Models.Contact
+
+<form class="delete-contact">
+    <input type="hidden" id="id" name="id" value="@Model.Id" />
+    <button type="submit">Delete</button>
+</form>
