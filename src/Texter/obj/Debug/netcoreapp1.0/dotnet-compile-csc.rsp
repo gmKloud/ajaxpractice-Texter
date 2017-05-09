@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\bin\Debug\netcoreapp1.0\Texter.dll"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\bin\Debug\netcoreapp1.0\Texter.dll"
 -r:"C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cors.dll"
@@ -198,15 +198,15 @@
 -r:"C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 -r:"C:\Users\epicodus\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll"
--resource:"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\obj\Debug\netcoreapp1.0\Texterdotnet-compile.deps.json",Texter.deps.json
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Program.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Startup.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Controllers\ContactController.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Controllers\HomeController.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Migrations\20170508233503_blah.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Migrations\20170508233503_blah.Designer.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Migrations\TexterContextModelSnapshot.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Models\Contact.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Models\EnvironmentVariables.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Models\Message.cs"
-"c:\Users\epicodus\documents\visual studio 2015\Projects\Texter\src\Texter\Models\TexterContext.cs"
+-resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\obj\Debug\netcoreapp1.0\Texterdotnet-compile.deps.json",Texter.deps.json
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Program.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Startup.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Controllers\ContactController.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Controllers\HomeController.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Migrations\20170509172953_New.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Migrations\20170509172953_New.Designer.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Migrations\TexterContextModelSnapshot.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Models\Contact.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Models\EnvironmentVariables.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Models\Message.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\Texter\src\Texter\Models\TexterContext.cs"

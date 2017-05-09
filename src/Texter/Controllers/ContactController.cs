@@ -23,18 +23,26 @@ namespace Texter.Controllers
         {
             return View(_db.Contacts.ToList());
         }
-
         public IActionResult ShowContactSave()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Create(string newName, string newNumber)
+        public IActionResult NewContact(string newName, string newNumber)
         {
             Contact newContact = new Contact(newName, newNumber);
             _db.Contacts.Add(newContact);
             _db.SaveChanges();
             return Json(newContact);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id)
+        {
+            var thisContact = _db.Contacts.FirstOrDefault(c => c.Id == id);
+            _db.Entry(thisContact).State = EntityState.Modified;
+            _db.SaveChanges();
+            return View(thisContact);
         }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Texter.Migrations
 {
-    public partial class blah : Migration
+    public partial class New : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

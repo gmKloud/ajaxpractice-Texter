@@ -8,11 +8,7 @@
 <h2>Contacts</h2>
 <hr /><hr />
 
-<div>
     <h3 class="add-contact">Add New Contact</h3>
-</div>
-
-<div class="row">
  
 @foreach (var contact in Model) {
     @if (contact == null)
@@ -21,18 +17,14 @@
     }
     else
     {
-    <div class="col-md-5 contact-list">
-    <div>
-        <h3>
+    <div class="contact-list">
+        <h3 class="contact-entry" id="@contact.Id">
             @Html.DisplayFor(modelItem => contact.Name):
-        @Html.DisplayFor(modelItem => contact.Number)
-    </h3>
-
-    </div>
+            @Html.DisplayFor(modelItem => contact.Number)
+        </h3>
+            <div id="edit-@contact.Id"></div>
     </div>
         }
     }
-
-    <div class="col-md-5" id="new-contact"></div>
-    <div id="saved-contact"></div>
-</div>
+    <div id="new-contact"></div>
+    <div id="edit"></div>

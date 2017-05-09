@@ -32,9 +32,6 @@ namespace Texter.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult ShowContactSave()
-        {
-            return View();
-        }
+        
     }
 }

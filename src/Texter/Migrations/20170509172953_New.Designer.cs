@@ -8,8 +8,8 @@ using Texter.Models;
 namespace Texter.Migrations
 {
     [DbContext(typeof(TexterContext))]
-    [Migration("20170508233503_blah")]
-    partial class blah
+    [Migration("20170509172953_New")]
+    partial class New
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

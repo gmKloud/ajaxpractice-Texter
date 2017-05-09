@@ -1,20 +1,14 @@
-﻿@{
-    ViewData["Title"] = "Texter";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-   @model Texter.Models.Contact
+﻿@model Texter.Models.Contact
 
 <h3>Save a Contact</h3>
 
-@using (Html.BeginForm())
-{
+    <form action="Contact/NewContact" class="add-new-cont" method="post">
+        <label for="newName">Name: </label>
+        <input type="text" name="newName" required/>
 
-    <h4>@Html.LabelFor(model => model.Name)</h4>
-    <h4>@Html.EditorFor(model => model.Name)</h4>
+        <label for="newNumber">Number: </label>
+        <input type="text" name="newNumber" required/>
 
-    <h4>@Html.LabelFor(model => model.Number)</h4>
-    <h4>@Html.EditorFor(model => model.Number)</h4>
-
-    <input type="submit" value="Save"/>
-
-}
+        <button type="submit">Add Contact</button>
+    </form>
+    <div id="saved-contact"></div>
